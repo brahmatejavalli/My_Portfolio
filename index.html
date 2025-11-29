@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>my portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- PREMIUM INTRO ANIMATION (inserted) -->
+  <div id="premium-intro" role="dialog" aria-label="Welcome to my portfolio" aria-modal="true">
+    <canvas id="intro-canvas" aria-hidden="true"></canvas>
+
+    <div class="intro-center" id="intro-center" aria-hidden="false">
+      <div class="logo-wrap" id="logoWrap">
+        <img id="introLogo" src="logo.png" alt="Logo" onerror="this.style.display='none'">
+        <div id="logoFallback" class="logo-fallback" aria-hidden="true"></div>
+      </div>
+
+      <h1 class="intro-title">Welcome to my portfolio</h1>
+      <p class="intro-sub" id="introSub" aria-live="polite"></p>
+
+      <div class="intro-ctas">
+        <button id="skipIntro" class="btn ghost small" aria-label="Go back">Go back</button>
+      </div>
+    </div>
+  </div>
+  <!-- /PREMIUM INTRO ANIMATION -->
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">my portfolio</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html#skills">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero container">
+    <div class="left">
+      <div class="avatar-wrap">
+        <img class="avatar" src="https://api.dicebear.com/6.x/identicon/svg?seed=ValluTeja&scale=90" alt="Profile avatar">
+        <div class="avatar-controls">
+          <button id="changeAvatarBtn" class="btn ghost small">Change photo</button>
+          <input id="avatarInput" type="file" accept="image/*" style="display:none" />
+          <button id="resetAvatarBtn" class="btn ghost small">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <h1>Hi — I'm <strong>Brahma Teja</strong></h1>
+      <p class="lead">MCA fresher focused on backend & full-stack development. I build reliable systems and learn fast.</p>
+
+      <p class="cta">
+        <!-- See Projects removed as requested -->
+        <a class="btn ghost" href="https://github.com/brahmatejavalli" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
+
+      <div class="link-card">
+        <a href="https://www.youtube.com/@vallubrahmateja359" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://www.instagram.com/myself_teja_vb/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.linkedin.com/in/brahma-teja-vallu-5074541a0/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="github-link" href="https://github.com/brahmatejavalli" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="mailto:brahmatejavalli@gmail.com">Email</a>
+      </div>
+    </div>
+  </main>
+
+  <section class="features container">
+    <div class="feature"><h3>Deployments</h3><p>Hosted demos and clear README for every project.</p></div>
+    <div class="feature"><h3>Clean Code</h3><p>Readable commits and documentation — what interviewers want.</p></div>
+    <div class="feature"><h3>Contact</h3><p>Contact form that sends to email (using Formsubmit / Netlify).</p></div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-note">&copy; 2025 V. B. Teja — Built with HTML, CSS, JS. <a href="README.md">README</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — my portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">my portfolio</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html#skills">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <button id="themeToggleTop2" aria-label="Toggle theme">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <h1>Selected Projects</h1>
+    <div id="projectsList"></div>
+
+    <hr style="margin:20px 0;">
+
+    <section aria-labelledby="add-project-heading">
+      <h2 id="add-project-heading">Add Project (from your files)</h2>
+      <p class="muted">Use this form to add a project entry locally and create a downloadable ZIP of the project files.</p>
+
+      <form id="addProjectForm" class="project-form" onsubmit="return false;">
+        <input type="text" id="projTitle" placeholder="Project title" required />
+        <textarea id="projDesc" rows="3" placeholder="Short description" required></textarea>
+
+        <label for="screenshotInput">Screenshot (optional)</label>
+        <input id="screenshotInput" type="file" accept="image/*" />
+
+        <label for="filesInput">Project files (select multiple or a folder)</label>
+        <input id="filesInput" type="file" webkitdirectory directory multiple />
+
+        <div style="display:flex; gap:8px; margin-top:8px;">
+          <button id="createZipBtn" class="btn" type="button">Create ZIP & Download</button>
+          <button id="saveProjBtn" class="btn ghost" type="button">Save Project Entry</button>
+          <button id="clearProjBtn" class="btn" type="button">Clear Local</button>
+        </div>
+        <p class="note" style="margin-top:8px">Files are not uploaded to any server. ZIP is generated in your browser. Saved entries (title, description, screenshot) are stored in localStorage.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-note">&copy; 2025 V. B. Teja</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
